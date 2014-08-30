@@ -1,0 +1,7 @@
+{
+    "id": 2,
+    "name": "Kindle",
+    "price": 69.00,
+    "images": ["Media/p2/1.jpg","Media/p2/2.jpg","Media/p2/3.jpg"],
+    "description": "Kindle — small, light, and fast"
+}

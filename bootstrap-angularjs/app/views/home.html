@@ -1,0 +1,12 @@
+<h1>Choose Your Kindle</h1>
+<div class="row" ng-controller="productController">
+    <div class="col-sm-4" ng-repeat="p in products">
+            <div class="product-image"><a href="#/product/{{p.id}}"><img ng-src="{{ p.images[0] }}" alt="{{p.name}}" width="100%"/></a></div>
+            <div class="well text-center">
+                <h2>{{ p.name }}</h2>
+                <h3><span class="label label-success">${{ p.price }}</span></h3>
+                <a href="#/product/{{p.id}}" class="btn btn-primary btn-lg">Details</a>
+            </div>
+        </div>
+    </div>
+</div>

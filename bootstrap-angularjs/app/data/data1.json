@@ -1,0 +1,7 @@
+{
+    "id": 1,
+    "name": "Kindle Paperwhite",
+    "price": 119.00,
+    "images": ["Media/p1/1.jpg","Media/p1/2.jpg","Media/p1/3.jpg"],
+    "description": "Unlike tablets, Kindle Paperwhite is designed to deliver the best reading experience"
+}

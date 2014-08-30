@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row" ng-controller="detailsController">
+        <div class="col-sm-4">
+            <div><img ng-src="{{ currentImage }}" alt="{{product.name}}" width="100%"/></div>
+            <div class="image-wrapper">
+                <span ng-repeat="img in product.images">
+                    <a ng-click="changePicture(img)">
+                        <img ng-src="{{ img }}" alt="{{product.name}}" width="75px" height="75px"/>
+                    </a>
+                </span>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="well">
+                <h1>{{ product.name }}</h1>
+                <h2><span class="label label-success">${{ product.price }}</span></h2>
+                <h3><p><a class="btn btn-primary btn-lg" ng-click="addToCart()">Add To Cart</a></p></h3>
+                <h4>{{product.description}}</h4>
+            </div>
+        </div>
+    </div>
+</div>

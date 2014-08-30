@@ -1,0 +1,20 @@
+<h1>Your cart</h1>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Price</th>
+            <th>Remove</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="item in cart">
+            <td><a href="#/product/{{item.id}}">{{item.name}}</a></td>
+            <td class="text-center"><img ng-src="{{item.images[0]}}" alt="{{item.name}}" width="35px" height="35px"/></td>
+            <td class="text-center">${{item.price}}</td>
+            <td class="text-center"><a ng-click="remove($index)" class="btn btn-danger">Remove</a></td>
+        </tr>
+    </tbody>
+</table>
+<h4>Cart total: {{ total }}</h4>

@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Kindle Paperwhite",
+        "price": 119.00,
+        "images": ["Media/p1/1.jpg","Media/p1/2.jpg","Media/p1/3.jpg"],
+        "description": "Unlike tablets, Kindle Paperwhite is designed to deliver the best reading experience"
+    },
+    {
+        "id": 2,
+        "name": "Kindle",
+        "price": 69.00,
+        "images": ["Media/p2/1.jpg","Media/p2/2.jpg","Media/p2/3.jpg"],
+        "description": "Kindle — small, light, and fast"
+    },
+    {
+        "id": 3,
+        "name": "Kindle Fire 7\" Tablet",
+        "price": 139.00,
+        "images": ["Media/p3/1.jpg","Media/p3/2.jpg","Media/p3/3.jpg"],
+        "description": "Our most affordable Kindle Fire—now with a stunning HD display, faster processor, and longer battery life"
+    }
+]

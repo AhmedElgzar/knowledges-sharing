@@ -1,0 +1,13 @@
+.navbar.navbar-inverse{
+    color: #fff;
+    line-height: 50px;
+}
+.product-image{
+    margin-bottom: 10px;
+}
+.image-wrapper{
+    margin-top: 10px;
+}
+.image-wrapper img{
+    cursor: pointer;
+}
