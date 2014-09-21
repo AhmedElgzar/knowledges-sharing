@@ -1,0 +1,51 @@
+﻿@model IEnumerable<yInvoice.Domain.Entities.Invoice>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Client
+        </th>        
+        <th>
+            Created
+        </th>
+        <th>
+            Updated
+        </th>
+        <th>
+            Status
+        </th>        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>        
+        <td>
+            @Html.DisplayFor(modelItem => item.Client.Name)
+        </td>
+        <td>
+            @string.Format("{d:dd-MM-yyyy}",item.CreatedOn)
+        </td>
+        <td>
+            @string.Format("{d:dd-MM-yyyy}", item.UpdatedOn)            
+        </td>
+        <td>
+            @((yInvoice.Domain.Entities.Statuses)item.Status)
+        </td>        
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |            
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

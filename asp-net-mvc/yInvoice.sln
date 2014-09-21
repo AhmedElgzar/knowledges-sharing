@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yInvoice.Web", "src\yInvoice.Web\yInvoice.Web.csproj", "{C0FCC341-6234-4CD0-8459-366DB61F449D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yInvoice.Domain", "src\yInvoice.Domain\yInvoice.Domain.csproj", "{33588848-47AD-444B-875A-63B5C5A8D4F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yInvoice.DataLayer", "src\yInvoice.DataLayer\yInvoice.DataLayer.csproj", "{BEF5FAC9-2C9D-4AFB-A72D-3D6F9ECEC679}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0FCC341-6234-4CD0-8459-366DB61F449D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0FCC341-6234-4CD0-8459-366DB61F449D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0FCC341-6234-4CD0-8459-366DB61F449D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0FCC341-6234-4CD0-8459-366DB61F449D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33588848-47AD-444B-875A-63B5C5A8D4F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33588848-47AD-444B-875A-63B5C5A8D4F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33588848-47AD-444B-875A-63B5C5A8D4F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33588848-47AD-444B-875A-63B5C5A8D4F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEF5FAC9-2C9D-4AFB-A72D-3D6F9ECEC679}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEF5FAC9-2C9D-4AFB-A72D-3D6F9ECEC679}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEF5FAC9-2C9D-4AFB-A72D-3D6F9ECEC679}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEF5FAC9-2C9D-4AFB-A72D-3D6F9ECEC679}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

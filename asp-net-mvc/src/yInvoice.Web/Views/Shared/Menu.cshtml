@@ -1,0 +1,14 @@
+﻿@model yInvoice.Domain.Entities.User
+@{    
+    Layout = null;
+}
+
+<ul id="menu">
+    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    @if (Model != null && (Model.Role == (int)yInvoice.Domain.Entities.UserRole.Admin || Model.Role == (int)yInvoice.Domain.Entities.UserRole.StaffMember))
+    { 
+    <li>@Html.ActionLink("User", "Index", "User")</li>
+        <li>@Html.ActionLink("Invoices", "Index", "Invoice")</li>
+    }
+</ul>
+
