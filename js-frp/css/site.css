@@ -1,0 +1,68 @@
+html, body{
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.product{
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    z-index: 99;
+    display: block;
+    cursor: move;
+}
+.human{
+    position: absolute;
+    margin: auto;
+    top: 0px;
+    left: 50%;
+    display: block;
+    cursor: move;
+}
+
+.control-panel{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    width: 136px;
+    height: 30px;
+    overflow: hidden;
+    border: 1px solid #333333;
+    z-index: 9999;
+}
+.control-panel .col-3{
+    float: left;
+    width: 33px;
+}
+.control-panel .col-2{
+    float: left;
+    width: 70px;
+}
+.current-height{
+    width: 70px;
+    height: 30px;
+    display: block;
+    text-align: center;
+    color: #333333;
+    line-height: 30px;
+    font-size: 24px;
+}
+.btn-size{
+    display: block;
+    background-color: #c77405;
+    width: 33px;
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: #333333;
+    line-height: 30px;
+    text-decoration: none;
+    font-size: 24px;
+}

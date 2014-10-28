@@ -1,0 +1,9 @@
+{
+    "name": "Iphone 6",
+    "image": "images/iphone.png",
+    "dimensions": {
+        "width": 6.7,
+        "height": 13.81,
+        "depth": 0.69
+    }
+}
