@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div ng-controller="homeCtrl">
+    <div ng-view></div>
+</div>
+
+@section scripts{
+    <script src="~/Scripts/app/mainModule.js"></script>
+    <script src="~/Scripts/app/homeCtrl.js"></script>
+    <script src="~/Scripts/app/listCtrl.js"></script>
+    <script src="~/Scripts/app/editCtrl.js"></script>
+    <script src="~/Scripts/app/newsService.js"></script>
+}

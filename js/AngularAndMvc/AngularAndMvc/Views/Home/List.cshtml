@@ -1,0 +1,10 @@
+﻿<div>
+    <a ng-click="createNews()">Post New</a>
+    <div class="newsWrap" ng-repeat="n in news">
+        <h2 class="newsTitle">{{n.Name}}</h2>
+        <div class="newsContent" ng-bind-html-unsafe="n.Content"></div>
+        <div class="buttons"><a ng-click="editNews(n.ID)">Edit</a> | <a ng-click="deleteNews(n.ID)">Delete</a>@* | <a ng-click="editNews(n.ID)">Remove</a>*@</div>
+    </div>
+</div>
+
+

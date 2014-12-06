@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <form action="{% url 'index' %}" class="form-inline" role="form" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <input type="text" name="term" id="term" placeholder="Put search text here" class="form-control" value="{{ term }}"/>
+                    <input type="submit" value="Search" class="btn btn-primary"/>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% if tracks %}
+        {% for track in tracks %}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    {{ track.name }}
+                    <a href="{{ track.url.url }}" class="play">Play</a>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>no files</p>
+    {% endif %}
+{% endblock %}
