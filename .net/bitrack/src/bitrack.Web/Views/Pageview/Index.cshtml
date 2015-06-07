@@ -1,0 +1,97 @@
+﻿@{
+    ViewBag.Title = "PageViews";
+}
+
+<h1>Page Views</h1>
+<p class="lead">01/05/2015 - 23/05/2015</p>
+<div class="row">
+    <div class="col-xs-12 col-md-3 right-on-desktop">
+        <div class="panel panel-primary">
+            <div class="panel-heading"><h3 class="panel-title">Filter</h3></div>
+            <div class="panel-body">
+                <div class="filter">
+                    <form action="" method="post">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <div class="input-daterange input-group" id="datepicker">
+                                        <input id="start_date" type="text" class="input-sm form-control" name="start" placeholder="Start Date" />
+                                        <span class="input-group-addon">to</span>
+                                        <input id="end_date" type="text" class="input-sm form-control" name="end" placeholder="End Date" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-center"><button class="btn add-filter">+ Add Filter</button></p>
+                        <div class="filter-list"></div>
+                        <div class="row text-center">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <div class="colums-toggle">
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <label class="btn btn-default toggle-column" data-column="4">
+                                                <input type="checkbox" autocomplete="off"> Browser
+                                            </label>
+                                            <label class="btn btn-default toggle-column" data-column="5">
+                                                <input type="checkbox" autocomplete="off"> OS
+                                            </label>
+                                            <label class="btn btn-default toggle-column" data-column="6">
+                                                <input type="checkbox" autocomplete="off"> Language
+                                            </label>
+                                            <label class="btn btn-default toggle-column" data-column="7">
+                                                <input type="checkbox" autocomplete="off"> Location
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-center"><input id="search" type="submit" class="btn btn-primary btn-lg" value="Search"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-9 col">
+        <div class="chart text-center"><canvas id="stats_chart" width="500px"></canvas></div>
+
+        <div class="data">
+            <table id="data_grid" class="table table-bordered table-striped" width="100%">
+                <thead>
+                    <tr>
+                        <th>Page</th>
+                        <th>Total Visits</th>
+                        <th>New Visits</th>
+                        <th>Returning Visits</th>
+                        <th>Browser</th>
+                        <th>Os</th>
+                        <th>Language</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+
+            </table>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+<script type="text/template" id="filter_template">
+    <% _.each(filters, function(f){ %>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Parameter <%= f.id + 1 %></h3>
+            <a href="#" class="remove-filter" data-id="<%= f.i + 1 %>"><span class="glyphicon glyphicon-remove"></span> </a>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-4 padding-5"><select name="f_field_<%= f.id %>" class="form-control"><option>PageView</option><option>Browser</option><option>Location</option></select></div>
+                <div class="col-xs-4 padding-5"><select name="f_op_<%= f.id %>" class="form-control"><option>Equal</option><option>Contains</option><option>Starts With</option></select></div>
+                <div class="col-xs-4 padding-5"><input name="f_term_<%= f.id %>" type="text" placeholder="Search Term" class="form-control" /></div>
+            </div>
+        </div>
+    </div>
+    <% }); %>
+</script>
+}
+

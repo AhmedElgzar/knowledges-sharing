@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Yaroslav Bigus">
+
+    <title>BiTrack - @ViewBag.Title</title>
+
+    <!-- Bootstrap core CSS -->
+    @Styles.Render("~/Content/css")
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-flash"></span> BiTrack</a>
+            <a class="navbar-brand collapsed" href="#">BI</a>
+            <button type="button" class="sidebar-toggle" style="display: block;">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <div class="btn-group website-dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Website 1 <span class="caret"></span></button>
+                <ul class="dropdown-menu" data-role="menu">
+                    <li><a href="#">Website 1</a></li>
+                    <li><a href="#">Website 2</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <aside class="sidebar">
+        <ul class="main-menu">
+            @*@Html.ActionLink("Pageviews", "Index", "Pageviews")*@
+            <li><a href="@Url.Action("Home", "Index")"><span class="glyphicon glyphicon-th"></span> <span class="menu-title">Home</span></a></li>
+            <li class="active"><a href="@Url.Action("Pageview", "Index")"><span class="glyphicon glyphicon-stats"></span> <span class="menu-title">PageViews</span></a></li>
+            <li><a href="@Url.Action("Event", "Index")"><span class="glyphicon glyphicon-calendar"></span> <span class="menu-title">Events</span></a></li>
+            <li><a href="@Url.Action("Goal", "Index")"><span class="glyphicon glyphicon-record"></span> <span class="menu-title">Goals</span></a></li>
+            <li><a href="@Url.Action("Experiment", "Index")"><span class="glyphicon glyphicon-education"></span> <span class="menu-title">Experiments</span></a></li>
+            <li><a href="@Url.Action("Settings", "Index")"><span class="glyphicon glyphicon-cog"></span> <span class="menu-title">Settings</span></a></li>
+            <li><a href="#logout"><span class="glyphicon glyphicon-off"></span> <span class="menu-title">Log Out</span></a></li>
+        </ul>
+    </aside>
+
+    <div class="page-wrap">
+        @RenderBody()
+    </div><!-- /.container -->
+
+    @Scripts.Render("~/bundles/libs")
+    @Scripts.Render("~/bundles/main")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
